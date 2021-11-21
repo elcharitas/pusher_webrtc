@@ -12,10 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Create an instance of Pusher
 const pusher = new Pusher({
-    appId: 'XXX-APP-ID',
-    key: 'XXX-APP-KEY',
-    secret: 'XXX-APP-SECRET',
-    cluster: 'XXX-APP-CLUSTER',
+    appId: 1290438,
+    key: '3ce1073c0d59347ca975',
+    secret: '8ad4b0e482494036b1b9',
+    cluster: 'eu',
     encrypted: true
 });
 
@@ -36,6 +36,6 @@ app.post('/pusher/auth', (req, res) => {
 });
 
 //listen on the app
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     return console.log('Server is up on 3000')
 });
