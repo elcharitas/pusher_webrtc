@@ -201,7 +201,7 @@
                 .then(getCam().then(stream => {
                     localUserMedia = stream;
                     toggleEndCallButton();
-                    document.getElementById("selfview").srcObject = evt.stream;
+                    document.getElementById("selfview").srcObject = stream;
                     caller.addStream(stream);
                     caller.createAnswer().then(function(sdp) {
                         caller.setLocalDescription(new RTCSessionDescription(sdp));
